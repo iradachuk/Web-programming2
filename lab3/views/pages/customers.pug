@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+    h3 Customers
+    form(class="form-inline")
+        div(class="form-group")
+            label ID
+            input(type="number" class="form-control" id="inputId")
+        div(class="form-group")
+            label Name
+            input(type="text" class="form-control" id="inputName")
+        div(class="form-group")
+            label Budget
+            input(type="number" class="form-control" id="inputBudget")
+        button(type="submit" class="btn btn-primary" id="createCustomerButton") Create Customer
+    table(id="customersList" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Name
+            th Budget
+            th Update
+            th Delete
+        tbody
+    pre(id="customerInfo")
+        strong ID: 
+        span(id="customerInfoId")
+        br
+        strong Name:
+        span(id="customerInfoName")
+        br
+        strong Budget:
+        span(id="customerInfoBudget")
+        br
+
+block append scripts
+    script(src='/public/js/customers.js')

@@ -1,0 +1,50 @@
+extends ../layout
+
+block content
+    h3 Project in progress
+    form(class="form-inline")
+        div(class="form-group")
+            label ID
+            input(type="number" class="form-control" id="inputId")
+        div(class="form-group")
+            label Project
+            input(type="text" class="form-control" id="inputProject")
+        div(class="form-group")
+            label Performer
+            input(type="text" class="form-control" id="inputPerformer")
+        div(class="form-group")
+            label Begin
+            input(type="text" class="form-control" id="inputBegin")
+        div(class="form-group")
+            label End
+            input(type="text" class="form-control" id="inputEnd")
+        button(type="submit" class="btn btn-primary" id="createProjectInProgressButton") Create Project
+    table(id="projectInProgressList" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Project
+            th Performer
+            th Begin
+            th End
+            th Update
+            th Delete
+        tbody
+    pre(id="projectInProgresssInfo")
+        strong ID:
+        span(id="projectInProgressInfoId")
+        br
+        strong Project:
+        span(id="projectInProgressInfoProject")
+        br
+        strong Performer:
+        span(id="projectInProgressInfoPerformer")
+        br
+        strong Begin:
+        span(id="projectInProgressInfoBegin")
+        br
+        strong End:
+        span(id="projectInProgressInfoEnd")
+        br
+
+block append scripts
+    script(src='/public/js/projectInProgress.js')

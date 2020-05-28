@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+    h3 Performers
+    form(class="form-inline")
+        div(class="form-group")
+            label ID
+            input(type="number" class="form-control" id="inputId")
+        div(class="form-group")
+            label Name
+            input(type="text" class="form-control" id="inputName")
+        div(class="form-group")
+            label Experience
+            input(type="number" class="form-control" id="inputExperience")
+        div(class="form-group")
+            label Workers
+            input(type="number" class="form-control" id="inputWorkers")
+        button(type="submit" class="btn btn-primary" id="createPerformerButton") Create Performer
+    table(id="performersList" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Name
+            th Experience
+            th Workers
+            th Update
+            th Delete
+        tbody
+    pre(id="performerInfo")
+        strong ID: 
+        span(id="performerInfoId")
+        br
+        strong Name: 
+        span(id="performerInfoName")
+        br
+        strong Experience:
+        span(id="performerInfoExperience")
+        br
+        strong Workers:
+        span(id="performerInfoWorkers")
+
+block append scripts
+    script(src='/public/js/performers.js')

@@ -1,0 +1,50 @@
+extends ../layout
+
+block content
+    h3 Projects
+    form(class="form-inline")
+        div(class="form-group")
+            label ID
+            input(type="number" class="form-control" id="inputId")
+        div(class="form-group")
+            label Name
+            input(type="text" class="form-control" id="inputName")
+        div(class="form-group")
+            label Description
+            input(type="text" class="form-control" id="inputDescription")
+        div(class="form-group")
+            label Customer
+            input(type="text" class="form-control" id="inputCustomer")
+        div(class="form-group")
+            label MinSkill
+            input(type="number" class="form-control" id="inputSkill")
+        button(type="submit" class="btn btn-primary" id="createProjectButton") Create Project
+    table(id="projectsList" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Name
+            th Description
+            th Customer
+            th MinSkill
+            th Update
+            th Delete
+        tbody
+    pre(id="projectInfo")
+        strong ID:
+        span(id="projectInfoId")
+        br
+        strong Name:
+        span(id="projectInfoName")
+        br
+        strong Description:
+        span(id="projectInfoDescription")
+        br
+        strong Customer:
+        span(id="projectInfoCustomer")
+        br
+        strong MinSkill:
+        span(id="projectInfoSkill")
+        br
+
+block append scripts
+    script(src='/public/js/projects.js')
